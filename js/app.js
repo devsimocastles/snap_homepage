@@ -54,7 +54,7 @@ function changeNavbar(){
         navbar.innerHTML = desktop_menu;
     }
     else {
-          document.querySelector(".hero__img").setAttribute("src", "https://i.postimg.cc/ZqyrqHXJ/image-hero-mobile.png");
+        document.querySelector(".hero__img").setAttribute("src", "https://i.postimg.cc/ZqyrqHXJ/image-hero-mobile.png");
         navbar.innerHTML = mobile_menu;
         const close_icon = document.getElementById("close");
         const open_icon = document.querySelector(".mobile__menu__icon");
