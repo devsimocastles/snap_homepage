@@ -1,0 +1,208 @@
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+
+
+@media screen and (min-width:1024px) {
+    .navbar{
+        height: 20em;
+        position: relative;
+        width: 95% ;
+        .content{
+            width: 100%;
+            @include set_flex(row, center, space-between);
+
+
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $Medium-Gray;
+                        transition: .2s;
+                        &:hover{
+                            color: $Almost-Black;
+                        }
+                    }
+                    &.dropdown{
+
+                        a.dropdown__title{
+                            &::after{
+                                content: url("./../images/icon-arrow-down.svg");
+                                margin-left: 1em;
+                                height: 4em;
+                                width: 4em;
+                            }
+                            &:focus::after{
+                                content: url("./../images/icon-arrow-up.svg");
+                            }
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .dropdown__content{
+                            border-radius: 15px;
+                        margin: 2em 0;
+                        background-color: #fff;
+                        box-shadow: 1px 1px 25px hsla(0, 0%, 41%, 0.404); 
+                        position: absolute;
+                        height: 10em;
+                        z-index: 2;
+                            a{
+                                display: block;
+                            }
+                        }
+
+                        &.features{
+                            .dropdown__content{
+                                visibility: hidden;
+                                height: 0;
+                                width: 0;
+                                transition: .3s all ease;
+                                left: 5%;
+                                a{
+                                    display: none;
+                                    transition: .3s opacity ease;
+                                    transition-delay: .2s;
+                                    opacity: 0;
+                                }
+                            }
+
+                            .dropdown__title:focus + .dropdown__content{
+                                visibility: visible;
+                                height: 10em;
+                                width: 10em;
+                                @include set_flex(column, center, space-evenly);
+                                a{
+                                    opacity: 1;
+                                    text-align: left;
+                                    @include set_flex(row, center, space-evenly);
+                                    width: 100%;
+                                    height: auto;
+                                    img.reminder{
+                                        position: relative;
+                                        left: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.company{
+                            .dropdown__content{
+                                visibility: hidden;
+                                height: 0;
+                                width: 0;
+                                transition: .3s all ease;
+                                left: 22.5%;
+                                a{
+                                    display: none;
+                                    transition: .3s opacity ease;
+                                    transition-delay: .2s;
+                                    opacity: 0;
+                                }
+                            }
+
+                            .dropdown__title:focus + .dropdown__content{
+                                visibility: visible;
+                                height: 10em;
+                                width: 10em;
+                                @include set_flex(column, center, space-evenly);
+                                a{
+                                    opacity: 1;
+                                    text-align: left;
+                                    @include set_flex(row, center, space-evenly);
+                                    width: 100%;
+                                    height: auto;
+                                    img.reminder{
+                                        position: relative;
+                                        left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .links{
+                @include set_flex(row, center, space-evenly);
+                width: 45%
+            }
+
+            .user__buttons{
+                width: 12.5em;
+                @include set_flex(row, center, space-between);
+                li{
+                    a.register{
+                        border: 2px solid $Medium-Gray;
+                        padding: .6em 1em;
+                        border-radius: 10px;
+                        &:hover{
+                            border-color: $Almost-Black;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    main {
+        display: grid;
+        grid-template-areas: 
+        "main_content hero_img"
+        "brands       hero_img"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 90vh;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .hero__container{
+        grid-area: hero_img;
+        @include set_flex(row, center, flex-end);
+        img{
+            width: 27.5em ;
+            height: auto;
+            margin: 0;
+        }
+    }
+    
+    .main__content{
+        @include set_flex(column, center, center);
+        height: 36.666em;
+        grid-area: main_content;
+        text-align: left;
+        margin: 0 ;
+        .text{
+            height: 90%;
+            @include set_flex(column, flex-start, center);
+            .main__title{
+                font-size: 4em;
+                text-align: left;
+            }
+            .main__paragraph{
+                text-align: left;
+                margin: 2em 0;
+            }
+            .learn__more{
+                margin: 0;
+            }
+        }
+        .brands{
+            height: 10%;
+            width: 100%;
+            padding: 0;
+            @include set_flex(row, flex-end, space-between);
+        }
+    }
+    
+    .brands{
+        grid-area: brands;
+    }
+}
+
+

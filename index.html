@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- SCSS STYLES -->
+  <link rel="stylesheet" href="sass/styles.css">
+
+  <!-- CUSTOM FONT: EPILOGUE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="menu__slider">
+        <img src="images/icon-close-menu.svg" alt="" srcset="" id="close">
+        <ul>
+          <li class="dropdown features">
+             <a href="#" class="dropdown__title">Features</a>
+             <div class="dropdown__content">
+              <a href="#">
+                <img src="images/icon-todo.svg" class="menu__icons" >Todo List</a>
+              <a href="#">
+                <img src="images/icon-calendar.svg" class="menu__icons" >Calendar</a>
+              <a href="#">
+                <img src="/images/icon-reminders.svg" class="menu__icons" >Reminders</a>
+              <a href="#">
+                <img src="images/icon-planning.svg" class="menu__icons" >Planning</a>
+             </div> 
+          </li>
+          <li class="dropdown company">
+             <a href="#" class="dropdown__title">Company</a>
+             <div class="dropdown__content">
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+             </div>   
+          </li>
+          <li> <a href="#">Popular</a></li>
+          <li> <a href="#">Trending</a></li>
+          <li> <a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </div>
+      <nav class="navbar">
+
+      </nav>
+  </header>
+  <main>
+    <div class="hero__container">
+      <img src="images/image-hero-mobile.png" alt="" class="hero__img">
+    </div>
+    <div class="main__content">
+      <div class="text">
+        <h1 class="main__title">Make Remote Work</h1>
+        <p class="main__paragraph">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <a href="#" class="learn__more">Learn more</a>
+      </div>
+      <section class="brands">
+        <img src="./images/client-databiz.svg" alt="databiz" class="brand__img">
+        <img src="./images/client-audiophile.svg" alt="audiophile" class="brand__img">
+        <img src="./images/client-meet.svg" alt="meet" class="brand__img">
+        <img src="./images/client-maker.svg" alt="maker" class="brand__img">
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
