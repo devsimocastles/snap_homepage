@@ -50,7 +50,7 @@ function turnMenu (el, remove, add) {
 
 function changeNavbar(){
     if (innerWidth >= 1024) {
-        document.querySelector(".hero__img").setAttribute("src", "./../images/image-hero-desktop.png");
+        document.querySelector(".hero__img").setAttribute("src", "https://raw.githubusercontent.com/devsimocastles/snap_homepage/main/images/image-hero-desktop.png");
         navbar.innerHTML = desktop_menu;
     }
     else {
