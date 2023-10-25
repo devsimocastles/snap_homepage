@@ -50,10 +50,11 @@ function turnMenu (el, remove, add) {
 
 function changeNavbar(){
     if (innerWidth >= 1024) {
-        document.querySelector(".hero__img").setAttribute("src", "https://raw.githubusercontent.com/devsimocastles/snap_homepage/main/images/image-hero-desktop.png");
+        document.querySelector(".hero__img").setAttribute("src", "https://i.postimg.cc/W1zGBTnF/image-hero-desktop.png");
         navbar.innerHTML = desktop_menu;
     }
     else {
+          document.querySelector(".hero__img").setAttribute("src", "https://i.postimg.cc/ZqyrqHXJ/image-hero-mobile.png");
         navbar.innerHTML = mobile_menu;
         const close_icon = document.getElementById("close");
         const open_icon = document.querySelector(".mobile__menu__icon");
